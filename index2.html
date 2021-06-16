@@ -1,0 +1,3127 @@
+<!--             cursor:url(http://res.cloudinary.com/dfjjznuuj/image/upload/v1502487092/cursor_image_ygqrdt.png), auto; -->
+
+<!DOCTYPE html>
+<html lang="en" class=" js no-touch">
+
+<head>
+	<title> Nail the Code </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/slick-team-slider.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.css" />
+	<link rel="stylesheet" href="dist/css/bootstrap-colorpicker.min.css" />
+  <link rel="stylesheet" href="lib/codemirror.css" />
+
+    <!-- =======================================================
+        Theme Name: Tempo
+        Theme URL: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/
+        Author: BootstrapMade.com
+        Author URL: https://bootstrapmade.com
+        ======================================================= -->
+
+        <style>
+
+        /*****************SANDBOX****************/
+          .sbox {
+            display:none;
+            width: 2000px;
+            height: 500px;
+            background-color: white;
+            border: 1px solid gray;
+            margin-left: -13cm;
+          }
+
+          .sbox_content {
+            display:none;
+            padding: 100px 400px;
+            border: 1px solid #ccc;
+            margin-left: -.5cm;
+            margin-top: -2.5cm;
+            height: 500px;
+            width: 2000px;
+          }
+          /********************************/
+
+          .CodeMirror {
+            border: 1px solid black;
+            width: 1150px;
+            height: 80px;
+          }
+
+          .clearfix:before,
+          .clearfix:after {
+            content: " ";
+            display: table;
+          }
+          .clearfix:after {
+            clear: both;
+          }
+          body {
+            font-family: didot;
+            background: #f6f9fa;
+
+
+          }
+          h1 {
+            color: #ca4d9c;
+            text-align: center;
+          }
+          a {
+            color: #ccc;
+            text-decoration: none;
+            outline: none;
+          }
+
+          img {
+            float: left;
+            max-width: 100%;
+            max-height: 100%;
+            resize: both;
+          }
+          .changeable: focus {
+            outline: 10px solid blue;
+          }
+
+          .nail_changeable img{
+              margin-top: -10cm;
+              margin-left: -10cm;
+            z-index: 200;
+          }
+          .changeable img {
+            margin: 3px;
+            z-index: 200;
+
+          }
+
+
+          /****************NAIL SHAPES ICON****************/
+          #edge, #natural, #square, #lipstick, #stiletto{
+            cursor: pointer;
+          }
+
+          #interactive_nail_background {
+            margin-top: -23cm;
+            margin-left: 0cm;
+            width: 700px;
+            height: 855px;
+            background: white;
+            position: relative;
+            display: inline-block;
+
+          }
+          #interactive_nail_background img {
+            width: 100%;
+            height: 100%;
+            float: left;
+          }
+
+
+          #nail_background {
+            margin-top: -23cm;
+            margin-left: 0cm;
+            width: 700px;
+            height: 855px;
+            background: white;
+            position: relative;
+
+          }
+          #nail_background img {
+            width: 100%;
+            height: 100%;
+            float: left;
+          }
+
+          .isResizable: focus {
+            .changeable: focus
+          }
+          #wrap {
+            width: 1000px;
+            margin: 0 auto;
+          }
+          #left_col {
+            float: left;
+            width: 500px;
+          }
+          #right_col {
+            padding: 15px;
+            float: right;
+            width: 500px;
+          }
+          #div2 {
+            padding: 15px;
+            float: right;
+            width: 500px;
+          }
+          img.one {
+            height: 10%;
+            width: 10%;
+            padding: 10px;
+          }
+          .carousel-container {
+            margin: 0 auto;
+            padding: 40px;
+            width: 80%;
+            color: #333;
+            background: #419be0;
+          }
+          .slick-slide {
+            text-align: center;
+            color: #419be0;
+            background: white;
+          }
+          .image {
+            float: left;
+          }
+          #elementResizable {
+            border: 1px solid #000000;
+            width: 300px;
+            height: 40px;
+            overflow: hidden;
+          }
+          #box {
+            width: 100px;
+            height: 100px;
+            background: url(http://s23.postimg.org/bkvu8abnv/circle.png) no-repeat;
+            background-size: 100% 100%;
+          }
+          .sticker_tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+          }
+          /* Style the buttons inside the tab */
+
+          .sticker_tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            color: #ca4d9c;
+          }
+          /* Change background color of buttons on hover */
+
+          .sticker_tab button:hover {
+            background-color: #ddd;
+          }
+          /* Create an active/current tablink class */
+
+          .sticker_tab button.active {
+            background-color: #ccc;
+          }
+          /* Style the tab content */
+
+          .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            height: 470px;
+          }
+
+          .code_sticker_tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+          }
+          /* Style the buttons inside the tab */
+
+          .code_sticker_tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            color: #ca4d9c;
+            width: 100px;
+          }
+          /* Change background color of buttons on hover */
+
+          .code_sticker_tab button:hover {
+            background-color: #ddd;
+          }
+          /* Create an active/current tablink class */
+
+          .code_sticker_tab button.active {
+            background-color: #ccc;
+          }
+          /* Style the tab content */
+
+          .codeable_sticker_tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            height: 470px;
+          }
+
+
+
+          #interactive_nail_color_change {
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 0cm;
+            cursor: pointer;
+            font-family: Georgia, serif;
+          }
+
+          #coded_nail_color_change {
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            margin-left: 0cm;
+            cursor: pointer;
+            font-family: Georgia, serif;
+          }
+          #gifs {
+            margin-left: -1cm;
+          }
+          #instructions_button_div {
+            background-color: #ca4d9c;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            margin-top: 0.5cm;
+            cursor: pointer;
+            width: 200px;
+          }
+          #hex_code_button{
+            background-color: #ca4d9c;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 24px;
+            margin: 4px 2px;
+            margin-top: 0.5cm;
+            cursor: pointer;
+            width: 200px;
+          }
+
+          .version_tab {
+            overflow: hidden;
+            width: 2000px;
+            margin-left: -13cm;
+            border: 2px solid black;
+          }
+
+          /* Style the buttons inside the tab */
+
+          .version_tab button {
+            float: left;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+          }
+
+          #interactive_button {
+            width: 997px;
+          }
+
+          #code_button {
+            width: 997px;
+          }
+
+          /* Create an active/current tablink class */
+
+          #interactive_button.active {
+            background-color: #ca4d9c;
+          }
+
+          #code_button.active {
+            background-color: #ca4d9c;
+          }
+
+
+
+          /* Style the tab content */
+
+          .versiontabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            background: white;
+            left: -7cm;
+            position: relative;
+            width: 2000px;
+            height: 2000px;
+          }
+
+          #Interactive{
+            margin-left: -6cm;
+            height: 1000px;
+
+          }
+
+          #whole {
+            height: 900px;
+            margin-bottom: 5cm;
+
+          }
+
+          #gifs {
+            margin-left: 1cm;
+          }
+
+
+          #gif1 {
+            margin-left: 5cm;
+            margin-top: 1cm;
+            border: 6px solid #ca4d9c;
+            width: 500px;
+          }
+
+          #gif2 {
+            margin-top: -9.25cm;
+            margin-left: 20cm;
+            margin-bottom: 1.5cm;
+            border: 6px solid #ca4d9c;
+            width: 500px;
+          }
+
+          #gif3 {
+            margin-left: 12cm;
+            border: 6px solid #ca4d9c;
+            width: 500px;
+          }
+
+          .question {
+            width: 500px;
+            height: 50px;
+            margin-top: 25px;
+            background: #ebedf2;
+            border: 1px solid #333;
+            clear: both;
+            text-align: center;
+            z-index: 200;
+          }
+
+          #imageSlot div {
+            /*margin-top: 25px;*/
+            border-width: 3px;
+            border-style: dashed;
+            width: 496px;
+            height: 46px;
+            background: #ddf;
+          }
+
+          #savedImageHolder{
+            border-width: 3px;
+            border-style: dashed;
+            width: 496px;
+            /*height: 46px;*/
+            background: grey;
+          }
+
+          #imageSlot div.hovered {
+            background: #aaa;
+          }
+
+          #Code_It_Yourself{
+            margin-left: -6cm;
+            margin-bottom: 5cm;
+            border: 1px solid black;
+            height: 1000px;
+          }
+
+          /* Style the tab */
+          .tab_code {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            width: 1215px;
+
+          }
+
+          /* Style the buttons inside the tab */
+          .tab_code button {
+            background-color: inherit;
+            float: left;
+            border: 1px solid black;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 22px;
+            width: 242px;
+            height: 100px;
+          }
+
+          /* Change background color of buttons on hover */
+          .tab_code button:hover {
+            background-color: #ca4d9c;
+
+          }
+
+          /* Create an active/current tablink class */
+          .tab_code button.active {
+            background-color: #ca4d9c;
+          }
+
+          /* Style the tab content */
+          .tabcontent_code {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            height: 730px;
+          }
+
+          .tab_interactive {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            width: 1215px;
+            margin-left: 20cm;
+            margin-top: -3cm;
+
+          }
+
+          /* Style the buttons inside the tab */
+          .tab_interactive button {
+            background-color: inherit;
+            float: left;
+            border: 1px solid black;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 22px;
+            width: 242px;
+            height: 100px;
+          }
+
+          /* Change background color of buttons on hover */
+          .tab_interactive button:hover {
+            background-color: #ca4d9c ;
+
+          }
+
+          /* Create an active/current tablink class */
+          .tab_interactive button.active {
+            background-color: #ca4d9c;
+          }
+
+          /* Style the tab content */
+          .tabcontent_interactive {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            height: 730px;
+            margin-left: 20cm;
+
+          }
+
+          #code_div{
+            margin-left: 20cm;
+            margin-top: -3cm;
+          }
+
+
+          #interactive_nail_background{
+            height: 500px;
+            width: 600px;
+            z-index: 0;
+            margin-left: 0.7cm;
+            position: absolute;
+
+          }
+
+          #code_nail_background{
+            height: 500px;
+            width: 600px;
+            z-index: 0;
+            margin-left: 0.7cm;
+            position: absolute;
+            margin-top: -20cm;
+
+          }
+
+
+          .nail{
+            margin-top: -23.25cm;
+            margin-left: 0.5cm;
+            z-index: 1;
+            position: absolute;
+          }
+
+          .colors{
+            margin-left: 2cm;
+            margin-top: -1cm;
+          }
+
+          .color {
+            width: 150px;
+            height: 160px;
+            float: left;
+          }
+
+          .color_icon_code {
+            width: 150px;
+            height: 160px;
+            float: left;
+          }
+
+          .more_colors{
+            margin-left: 10cm;
+            margin-top: -2cm;
+          }
+
+          #wrapper{
+            width: 50px;
+            height: 50px;
+            z-index: 10;
+          }
+
+          #skin_tone_circles{
+            margin-left: 3cm;
+            width: 1280px;
+          }
+
+          textarea{
+            font-size: 30px;
+            resize: none;
+          }
+
+          figcaption{
+            font-size: 25px;
+            text-align: center;
+
+          }
+
+          figure{
+            float: left;
+            text-align: center;
+            padding: 4px;
+            align-content: center;
+          }
+
+          #creativity_in_code{
+            color: white;
+          }
+
+          .skin_color{
+            display: inline-block;
+            float: left;
+          }
+
+          #skin_tone_text{
+            width: 1180px;
+            height: 70px;
+          }
+
+          #nail_color_text{
+            width: 1180px;
+            height: 70px;
+          }
+
+          #index{
+            width: 110px;
+            height: 80px;
+            margin-top: -15.25cm;
+            margin-left: 5cm;
+          }
+
+          #index_wrapper{
+            width: 95px;
+            height: 83px;
+            margin-top: -2.2cm;
+            margin-left: 5.2cm;
+            position: absolute;
+            z-index: 400;
+          }
+
+          #middle{
+            width: 70px;
+            height: 95px;
+            margin-top: -1cm;
+            margin-left: 7.6cm;
+          }
+
+          #middle_wrapper{
+            width: 70px;
+            height: 100px;
+            margin-top: -2.5cm;
+            margin-left: 7.6cm;
+            position: absolute;
+            z-index: 400;
+          }
+
+          #ring{
+            width: 70px;
+            height: 95px;
+            margin-top: -1.25cm;
+            margin-left: 9.7cm;
+
+          }
+
+          #ring_wrapper{
+            width: 70px;
+            height: 100px;
+            margin-top: -2.75cm;
+            margin-left: 9.7cm;
+            position: absolute;
+            z-index: 400;
+          }
+
+          #pinky{
+            width: 70px;
+            height: 95px;
+            margin-top: -4cm;
+            margin-left: 11.5cm;
+            
+
+          }
+
+          #pinky_wrapper{
+            width: 70px;
+            height: 100px;
+            margin-top: -2.75cm;
+            margin-left: 11.5cm;
+            position: absolute;
+            z-index: 400;
+          }
+
+          #selected_color_interactive{
+            width: 160px;
+            margin-left: 17cm;
+            margin-top: -6cm;
+          }
+
+          #selected_color_interactive_background{
+            width: 140px;
+            height: 130px;
+            margin-left: 17cm;
+            margin-top: -4.7cm;
+          }
+
+
+        </style>
+      </head>
+
+      <body>
+
+       <!--HEADER START-->
+
+       <div class="main-navigation navbar-fixed-top">
+        <nav class="navbar navbar-default">
+         <div class="container">
+          <div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Nail The Code</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+         <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#banner">Home</a>
+          </li>
+          <li><a href="#service">Try it</a>
+          </li>
+          <li><a href="#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<!--HEADER END-->
+
+<!--BANNER START-->
+<div id="banner" class="section-padding">
+  <div class="container">
+   <div class="row">
+    <div class="jumbotron">
+     <h1 class="small">Welcome To <span class="bold">Nail the Code</span></h1>
+     <p class="big">By Preemadonna</p>
+     <a href="#" class="btn btn-banner">Learn More<i class="fa fa-send"></i></a>
+   </div>
+ </div>
+</div>
+</div>
+<!--BANNER END-->
+
+<!--CTA1 START-->
+<div class="cta-1">
+  <div class="container">
+   <div class="row text-center white">
+    <h1 class="cta-title" id="creativity_in_code">Creativity in Code</h1>
+    <p class="cta-sub-title">...</p>
+  </div>
+</div>
+</div>
+<!--CTA1 END-->
+
+<!--SERVICE START-->
+<div id="service" class="section-padding">
+  <div class="container">
+   <div class="row">
+    <div class="page-title text-center">
+     <h1>Try it</h1>
+     <p>The Nailbot isn’t the only one who gets to have all the fun! Start designing now! </p>
+     <hr class="pg-titl-bdr-btm"></hr>
+   </div>
+
+ </div>
+
+
+
+
+ <div id="whole">
+
+  <div class="version_tab">
+   <button id="interactive_button" class="version_tablinks" onclick="openCityVersion(event, 'Interactive')">Interactive</button>
+   <button id="code_button" class="version_tablinks" onclick="openCityVersion(event, 'Code_It_Yourself')">Code It Yourself</button>
+ </div>
+
+
+
+
+ <div id="Interactive" class="versiontabcontent">
+   <h1><center>Design</center></h1>
+   <h3 style="font-size: 22px"><center>"Mani"pulate technology and create your own set of designer nail looks!</center></h3>
+
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+
+   <div id="interactive_wrapper">
+
+    <div class="tab_interactive">
+     <button id="skin_tone_button" class="tablinks_interactive" onclick="openCity_interactive(event, 'skin_tone_inter')">SKIN SHADE</button>
+     <button class="tablinks_interactive" onclick="openCity_interactive(event, 'nail_color_inter')">NAIL COLOR</button>
+     <button class="tablinks_interactive" id="nail_shape_id" onclick="openCity_interactive(event, 'nail_shape_inter')">NAIL SHAPE</button>
+     <button id="stickers_inter_button" class="tablinks_interactive" onclick="openCity_interactive(event, 'stickers_inter'); cuteAlert()">NAIL DESIGN</button>
+     <button class="tablinks_interactive" onclick="openCity_interactive(event, 'save_art_inter')">SAVE ART</button>
+   </div>
+
+   <div id="skin_tone_inter" class="tabcontent_interactive">
+     <h1><center>Let’s get started! Pick a skin tone!</center></h1>
+     <div id="skin_tone_circles">
+      <img class="skin_color" id="color_1" src="color1.png" onclick="imageChangeBrown1('interactive')" width="15%">
+      <img class="skin_color" id="color_2" src="color2.png" onclick="imageChangeBrown2('interactive')" width="15%">
+      <img class="skin_color" id="color_3" src="color3.png" onclick="imageChangeBrown3('interactive')" width="15%">
+      <img class="skin_color" id="color_4" src="color4.png" onclick="imageChangeBrown4('interactive')" width="15%">
+      <img class="skin_color" id="color_5" src="color5.png" onclick="imageChangeBrown5('interactive')" width="15%"><br><br><br><br><br><br><br><br>
+      <img class="skin_color" id="color_6" src="color6.png" onclick="imageChangeBrown6('interactive')" width="15%" style="margin-top: 5cm margin-left: -4cm">
+      <img class="skin_color" id="color_7" src="color7.png" onclick="imageChangeBrown7('interactive')" width="15%">
+      <img class="skin_color" id="color_8" src="color8.png" onclick="imageChangeBrown8('interactive')" width="15%">
+      <img class="skin_color" id="color_9" src="color9.png" onclick="imageChangeBrown9('interactive')" width="15%">
+      <img class="skin_color" id="color_10" src="color10.png" onclick="imageChangeBrown10('interactive')" width="15%">
+    </div>
+
+
+
+  </div>
+
+  <div id="nail_color_inter" class="tabcontent_interactive">
+   <h1><center>Add a splash of color to those nails!</center></h1><br>
+
+   <div class="colors">
+    <img class="color" src="ColorIcons/white_circle.png" onclick="imageChangerWhite('interactive')">
+    <img class="color" src="ColorIcons/pink_circle.png" onclick="imageChangerPink('interactive')">
+    <img class="color" src="ColorIcons/red_circle.png" onclick="imageChangerRed('interactive')">
+    <img class="color" src="ColorIcons/orange_circle.png" onclick="imageChangerOrange('interactive')">
+    <img class="color" src="ColorIcons/yellow_circle.png" onclick="imageChangerYellow('interactive')">
+    <img class="color" src="ColorIcons/green_circle.png" onclick="imageChangerGreen('interactive')">
+    <img class="color" src="ColorIcons/light_blue_circle.png" onclick="imageChangerLightBlue('interactive')">
+    <img class="color" src="ColorIcons/dark_blue_circle.png" onclick="imageChangerDarkBlue('interactive')">
+    <img class="color" src="ColorIcons/purple_circle.png" onclick="imageChangerPurple('interactive')">
+    <img class="color" src="ColorIcons/black_circle.png" onclick="imageChangerBlack('interactive')">
+    <img class="color" src="ColorIcons/golden_circle.png" onclick="imageChangerGold('interactive')">
+    <img class="color" src="ColorIcons/space_circle.png" onclick="imageChangerSpace('interactive')">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <img class="more_colors" src="ClickHereForMoreColors.png" width=25% height=25% style="margin-left: 4cm">
+    <div id="interactive_nail_color_change"></div>
+    <img id="selected_color_interactive" src="selected_color.png">
+    <div id="selected_color_interactive_background"></div>
+
+  </div>
+
+</div>
+
+<div id="nail_shape_inter" class="tabcontent_interactive">
+ <h1 style="font-size: 28px"><center>Let’s get these nails in tip top shape! Choose one of the looks below!</center></h1>
+ <div id="shape_icons">
+  <img id="natural" src="Hands/Icons/natural_icon.png" onClick="imageChangeNatural('interactive')" width=25%>
+  <img id="edge" src="Hands/Icons/edge_icon.png" onClick="imageChangeEdge('interactive')" width=25%>
+  <img id="lipstick" src="Hands/Icons/lipstick_icon.png" onClick="imageChangeLipstick('interactive')" width=25%>
+  <img id="stiletto" src="Hands/Icons/stiletto_icon.png" onClick="imageChangeStiletto('interactive')" width=25%>
+  <img id="square" src="Hands/Icons/square_icon.png" onClick="imageChangeSquare('interactive')" width=25%>
+</div>
+</div>
+
+<div id="stickers_inter" class="tabcontent_interactive">
+ <h1 style="font-size: 28px"><center>Don’t "stick" to the basics! Choose stickers to create your own awesome looks!</center></h1>
+ <center><button id="instructions_button_div" onclick="cuteAlert()"> Instructions </button></center>
+
+ <br>
+ <br>
+ <div class="sticker_tab">
+  <button id="emoji_button" class="tablinks" onclick="openCity(event, 'Emojis')">Emojis</button>
+  <button class="tablinks" onclick="openCity(event, 'Jewels')">Design Your Own Art</button>
+  <button class="tablinks" onclick="openCity(event, 'More')">Upload Stickers</button>
+  <button class="tablinks" onclick="openCity(event, 'Partners')">Partners</button>
+</div>
+
+
+<div id="Partners" class="tabcontent">
+  <h1><center>L'Oréal</center></h1>
+  <h3><center>Beaumoji</center></h3>
+
+  <div style="margin-left: 11cm">
+    <img src="beaumoji_hearts/blue_heart.png" style="width: 8%">
+
+
+
+    <img src="beaumoji_hearts/black_heart.png" style="width: 8%">
+
+
+
+    <img src="beaumoji_hearts/red_heart.png" style="width: 8%">
+
+
+
+    <img src="beaumoji_hearts/pink_heart.png" style="width: 8%">
+
+
+
+    <img src="beaumoji_hearts/purple_heart.png" style="width: 8%">
+  </div>
+
+
+  <br><br><br><br>
+
+
+  <h1><center>Girl Scouts</center></h1>
+  <h3><center>G.I.R.L.2017</center></h3>
+  <div style="margin-left: 8cm">
+    <img src="girl_scouts/Girl Scout Collection 2-01.png" style="width: 8%">
+
+
+
+    <img src="girl_scouts/GS colleciton 1-01.png" style="width: 8%">
+
+
+
+    <img src="girl_scouts/GS collection 4-01.png" style="width: 8%">
+
+
+
+    <img src="girl_scouts/GS Collection 6-01.png" style="width: 8%">
+
+
+
+    <img src="girl_scouts/GS Collection 11-01.png" style="width: 8%">
+
+    <img src="girl_scouts/GS Collection5-01.png" style="width: 8%">
+    <img src="girl_scouts/GS Collection 10-01.png" style="width: 8%">
+    <img src="girl_scouts/GS Collection 9-01.png" style="width: 8%">
+  </div>
+
+</div>
+
+
+
+<div id="Emojis" class="tabcontent">
+  <h1><center>Food</center></h1>
+  <div class="Food">
+    <div class="changeable" id="movable1" tabindex="-1">
+      <img class="image" src="emojis/food/acorn.png">
+    </div>
+
+    <div class="changeable" id="movable2" tabindex="-1">
+      <img class="image" src="emojis/food/apple_green.png">
+    </div>
+
+    <div class="changeable" id="movable3" tabindex="-1">
+      <img class="image" src="emojis/food/apple_red.png">
+    </div>
+
+    <div class="changeable" id="movable4" tabindex="-1">
+      <img src="emojis/food/avocado.png">
+    </div>
+
+    <div class="changeable" id="movable5" tabindex="-1">
+      <img src="emojis/food/bacon.png">
+    </div>
+
+    <div class="changeable" id="movable6" tabindex="-1">
+      <img src="emojis/food/baguette.png">
+    </div>
+
+    <div class="changeable" id="movable7" tabindex="-1">
+      <img src="emojis/food/banana.png">
+    </div>
+
+    <div class="changeable" id="movable8" tabindex="-1">
+      <img src="emojis/food/bread.png">
+    </div>
+
+    <div class="changeable" id="movable9" tabindex="-1">
+      <img src="emojis/food/burger.png">
+    </div>
+
+    <div class="changeable" id="movable10" tabindex="-1">
+      <img src="emojis/food/cannoli.png">
+    </div>
+
+    <div class="changeable" id="movable11" tabindex="-1">
+      <img src="emojis/food/carrot.png">
+    </div>
+
+    <div class="changeable" id="movable12" tabindex="-1">
+      <img src="emojis/food/cheese.png">
+    </div>
+
+    <div class="changeable" id="movable13" tabindex="-1">
+      <img src="emojis/food/cherries.png">
+    </div>
+
+    <div class="changeable" id="movable14" tabindex="-1">
+      <img src="emojis/food/chicken_wing_2.png">
+    </div>
+
+    <div class="changeable" id="movable15" tabindex="-1">
+      <img src="emojis/food/chicken_wing.png">
+    </div>
+
+    <div class="changeable" id="movable16" tabindex="-1">
+      <img src="emojis/food/chilli.png">
+    </div>
+
+
+    <div class="changeable" id="movable17" tabindex="-1">
+      <img src="emojis/food/corn.png">
+    </div>
+
+    <div class="changeable" id="movable18" tabindex="-1">
+      <img src="emojis/food/cucumber.png">
+    </div>
+
+
+    <div class="changeable" id="movable19" tabindex="-1">
+      <img src="emojis/food/egg_pan.png">
+    </div>
+
+    <div class="changeable" id="movable20" tabindex="-1">
+      <img class="image" src="emojis/food/egg.png">
+    </div>
+
+    <div class="changeable" id="movable21" tabindex="-1">
+      <img class="image" src="emojis/food/eggplant.png">
+    </div>
+
+    <div class="changeable" id="movable22" tabindex="-1">
+      <img class="image" src="emojis/food/enchilada.png">
+    </div>
+
+    <div class="changeable" id="movable23" tabindex="-1">
+      <img src="emojis/food/french_fries.png">
+    </div>
+
+    <div class="changeable" id="movable24" tabindex="-1">
+      <img src="emojis/food/grape.png">
+    </div>
+
+    <div class="changeable" id="movable25" tabindex="-1">
+      <img src="emojis/food/grapefruit.png">
+    </div>
+
+    <div class="changeable" id="movable26" tabindex="-1">
+      <img src="emojis/food/honey.png">
+    </div>
+
+    <div class="changeable" id="movable29" tabindex="-1">
+      <img src="emojis/food/hotdog.png">
+    </div>
+
+    <div class="changeable" id="movable30" tabindex="-1">
+      <img src="emojis/food/kiwi.png">
+    </div>
+
+    <div class="changeable" id="movable31" tabindex="-1">
+      <img src="emojis/food/lemon.png">
+    </div>
+
+    <div class="changeable" id="movable32" tabindex="-1">
+      <img src="emojis/food/orange.png">
+    </div>
+
+    <div class="changeable" id="movable33" tabindex="-1">
+      <img src="emojis/food/pancake.png">
+    </div>
+  </div>
+
+  <br><br><br><br><br><br>
+
+  <h1><center>Emotions</center></h1>
+  <div class="Emotions">
+   <div class="changeable" id="movable41" tabindex="-1">
+    <img class="image" src="emojis/emoji_faces/blush.png">
+  </div>
+
+  <div class="changeable" id="movable42" tabindex="-1">
+    <img class="image" src="emojis/emoji_faces/closed_eyes_happy.png">
+  </div>
+
+  <div class="changeable" id="movable43" tabindex="-1">
+    <img class="image" src="emojis/emoji_faces/closed_eyes_smile.png">
+  </div>
+
+  <div class="changeable" id="movable44" tabindex="-1">
+    <img src="emojis/emoji_faces/disappointed.png">
+  </div>
+
+  <div class="changeable" id="movable45" tabindex="-1">
+    <img src="emojis/emoji_faces/heart_eyes.png">
+  </div>
+
+  <div class="changeable" id="movable46" tabindex="-1">
+    <img src="emojis/emoji_faces/kissy_face_eyes_closed.png">
+  </div>
+
+  <div class="changeable" id="movable47" tabindex="-1">
+    <img src="emojis/emoji_faces/kissy_face_eyes_opened.png">
+  </div>
+
+  <div class="changeable" id="movable48" tabindex="-1">
+    <img src="emojis/emoji_faces/kissy_face_with_eyes.png">
+  </div>
+
+  <div class="changeable" id="movable49" tabindex="-1">
+    <img src="emojis/emoji_faces/laughing_tears.png">
+  </div>
+
+  <div class="changeable" id="movable50" tabindex="-1">
+    <img src="emojis/emoji_faces/no_mouth.png">
+  </div>
+
+  <div class="changeable" id="movable51" tabindex="-1">
+    <img src="emojis/emoji_faces/open_mouth_happy.png">
+  </div>
+
+  <div class="changeable" id="movable52" tabindex="-1">
+    <img src="emojis/emoji_faces/persevering.png">
+  </div>
+
+  <div class="changeable" id="movable53" tabindex="-1">
+    <img src="emojis/emoji_faces/raised_eyebrow.png">
+  </div>
+
+  <div class="changeable" id="movable54" tabindex="-1">
+    <img src="emojis/emoji_faces/rolling_eyes.png">
+  </div>
+
+  <div class="changeable" id="movable55" tabindex="-1">
+    <img src="emojis/emoji_faces/sad_but_relieved.png">
+  </div>
+
+  <div class="changeable" id="movable56" tabindex="-1">
+    <img src="emojis/emoji_faces/smiley_face.png">
+  </div>
+
+
+  <div class="changeable" id="movable57" tabindex="-1">
+    <img src="emojis/emoji_faces/smirking_1.png">
+  </div>
+
+  <div class="changeable" id="movable58" tabindex="-1">
+    <img src="emojis/emoji_faces/smirking_2.png">
+  </div>
+
+
+  <div class="changeable" id="movable59" tabindex="-1">
+    <img src="emojis/emoji_faces/smirking_with_tears.png">
+  </div>
+
+  <div class="changeable" id="movable60" tabindex="-1">
+    <img class="image" src="emojis/emoji_faces/star_eyes.png">
+  </div>
+
+  <div class="changeable" id="movable61" tabindex="-1">
+    <img class="image" src="emojis/emoji_faces/straight_face.png">
+  </div>
+
+</div>
+</div>
+
+<div id="Jewels" class="tabcontent">
+  <h1><center>Design Your Own Art</center></h1>
+  <h4><center>Sponsored by Adobe</center></h4>
+  <h5><center>Coming soon!</center></h5>
+
+  <div class="changeable" id="adobe1" tabindex="-1">
+    <img src="creative_cloud.svg" width="100px" style="margin-left: 9cm">
+  </div>
+
+  <div class="changeable" id="adobe2" tabindex="-1">
+    <img src="lightroom.png" width="100px">
+  </div>
+
+  <div class="changeable" id="adobe3" tabindex="-1">
+    <img src="photoshop.png" width="100px">
+  </div>
+
+  <div class="changeable" id="adobe4" tabindex="-1">
+    <img src="illustrator.png" width="100px">
+  </div>
+
+  <br><br><br><br><br>
+
+
+
+
+  <img src="adobe_logo.jpg" width="250px" style="margin-left: 12cm">
+</div>
+
+
+<div id="More" class="tabcontent">
+  <h1><center>Upload Stickers</center></h1>
+  <h3><center>Coming soon!</center></h3>
+  <center><iframe src="https://giphy.com/embed/tELwY5OG7jdde" width="100" height="121" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <iframe src="https://giphy.com/embed/lhvyCCcFuQFKo" width="100" height="121" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <iframe src="https://giphy.com/embed/rlChzWTthWgyA" width="140" height="140" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <iframe src="https://giphy.com/embed/3oKIPtArcgQmH9dBK0" width="130" height="121" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <iframe src="https://giphy.com/embed/9KzUbWiyll1cI" width="130" height="121" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></center>
+    <br>
+    <img src="giphy.gif" style="margin-left: 7cm" width="50%">
+  </div>
+
+</div>
+
+<div id="save_art_inter" class="tabcontent_interactive">
+ <h1 style="font-size: 30px"><center>You NAILED those looks! Now it’s time to save them!</center></h1>
+ <h2><center> Coming soon... </center></h2>
+</div>
+
+<div id="interactive_nail_hand">
+
+ <div id="wrapper"><img class="nail" id="interactive_nail" src="new_hands/trial.png" draggable="false" width=650px></div>
+ <div class="nail_background" id="index"></div>
+ <div id="index_wrapper" onclick="changeNailColor('index')"></div>
+ <div class="nail_background" id="middle"></div>
+ <div id="middle_wrapper" onclick="changeNailColor('middle')"></div>
+ <div class="nail_background" id="ring"></div>
+ <div id="ring_wrapper" onclick="changeNailColor('ring')"></div>
+ <div class="nail_background" id="pinky"></div>
+ <div id="pinky_wrapper" onclick="changeNailColor('pinky')"></div>
+
+
+
+</div>
+
+</div>    			
+
+</div>
+
+
+<div id="Code_It_Yourself" class="versiontabcontent">
+ <h1><center>Code It Yourself</center></h1>
+ <h3 style="font-size: 22px"><center>Time to code some fierce manis without all the mess!</center></h3>
+
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+ <div id="code_div">
+
+  <div class="tab_code">
+   <button id="skin_tone_button_1" class="tablinks_code" onclick="openCity_code(event, 'skin_tone')">SKIN SHADE</button>
+   <button class="tablinks_code" onclick="openCity_code(event, 'nail_color')">NAIL COLOR</button>
+   <button class="tablinks_code" id="nail_shape_id" onclick="openCity_code(event, 'nail_shape')">NAIL SHAPE</button>
+   <button id="stickers_code_button"class="tablinks_code" onclick="openCity_code(event, 'stickers'); cuteAlert()">NAIL DESIGN</button>
+   <button class="tablinks_code" onclick="openCity_code(event, 'save_art')">SAVE ART</button>
+ </div>
+
+ <div id="skin_tone" class="tabcontent_code">
+   <h1><center>Let’s get started! Pick a skin tone!</center></h1>
+
+   <div id="skin_tone_circles" style="margin-left: 1cm">
+     <figure>
+      <img class="skin_color" id="color_1" src="color1_code.png" onclick="imageChangeBrown1('code')" width=160%>
+      <br><br><br><br>
+      <figcaption><center>Emma<br>Watson</center></figcaption>
+    </figure>
+
+    <figure>
+      <img class="skin_color" id="color_2" src="color2_code.png" onclick="imageChangeBrown2('code')" width=160%>
+      <br><br><br><br>
+      <figcaption>Grace<br>Hopper</figcaption>
+    </figure>
+
+    <figure>
+      <img class="skin_color" id="color_3" src="color3_code.png" onclick="imageChangeBrown3('code')">
+      <br><br><br><br>
+      <figcaption>Pree<br>Walia</figcaption>
+    </figure>
+
+    <figure>
+      <img class="skin_color" id="color_4" src="color4_code.png" onclick="imageChangeBrown4('code')" width=108%>
+      <br><br><br><br>
+      <figcaption>Priyanka<br>Chopra</figcaption>
+    </figure>
+
+    <figure>
+      <img class="skin_color" id="color_5" src="color5_code.png" onclick="imageChangeBrown5('code')" width=95%>
+      <br><br><br><br>
+      <figcaption>Malala<br>Yousafzai</figcaption>
+    </figure>
+
+    <figure>
+      <img class="skin_color" id="color_6" src="color6_code.png" onclick="imageChangeBrown6('code')">
+      <br><br><br><br>
+      <figcaption>Tyra<br>Banks</figcaption>
+    </figure>
+
+    <figure>
+      <img class="skin_color" id="color_7" src="color7_code.png" onclick="imageChangeBrown7('code')" width=108%>
+      <br><br><br><br>
+      <figcaption>Beyonce<br>Knowles</figcaption>
+    </figure>
+
+    <figure>
+      <img class="skin_color" id="color_8" src="color8_code.png" onclick="imageChangeBrown8('code')" width=108%>
+      <br><br><br><br>
+      <figcaption>Michelle<br>Obama</figcaption>
+    </figure>
+
+    <figure>
+      <img class="skin_color" id="color_9" src="color9_code.png" onclick="imageChangeBrown9('code')" width=108%>
+      <br><br><br><br>
+      <figcaption>Oprah<br>Winfrey</figcaption>
+    </figure>
+
+    <figure>
+      <img class="skin_color" id="color_10" src="color10_code.png" onclick="imageChangeBrown10('code')" width=108%>
+      <br><br><br><br>
+      <figcaption>Lupita<br>Nyongo</figcaption>
+    </figure>
+  </div>
+
+  <br><br><br><br><br><br><br><h1><center>Code It!</center></h1>
+  <h3><center>Type a name from above or click on a circle icon to change up the skin tone!</center></h3>
+
+
+  <h4><b> Sample: var skin_tone = 'Emma Watson';</b></h4>
+  <div id="skin_tone_text">var skin_tone = 'Emma Watson';</div>
+
+
+  <img src="Instructions/var_instructions.png" width=30% style="margin-left: 1.4cm;">
+  <img src="Instructions/skin_tone_instructions.png" width=46% style="margin-left: -4.5cm">
+  <img src="Instructions/skin_tone_name_instructions.png" width="50%" style="margin-left: -8cm">
+
+</div>
+
+<div id="nail_color" class="tabcontent_code">
+ <h1><center>Add a splash of color to those nails!</center></h1><br>
+ <div class="colors" style="margin-left: 0cm"> 
+   <div id="colors_coded_container">
+    <div id="coded_colors">
+      <img class="color_icon_code" src="ColorIcons/white_circle.png" onclick="imageChangerWhite('code')">
+      <img class="color_icon_code" src="ColorIcons/pink_circle.png" onclick="imageChangerPink('code')">
+      <img class="color_icon_code" src="ColorIcons/red_circle.png" onclick="imageChangerRed('code')">
+      <img class="color_icon_code" src="ColorIcons/orange_circle.png" onclick="imageChangerOrange('code')">
+      <img class="color_icon_code" src="ColorIcons/yellow_circle.png" onclick="imageChangerYellow('code')">
+      <img class="color_icon_code" src="ColorIcons/green_circle.png" onclick="imageChangerGreen('code')">
+      <img class="color_icon_code" src="ColorIcons/light_blue_circle.png" onclick="imageChangerLightBlue('code')">
+      <img class="color_icon_code" src="ColorIcons/dark_blue_circle.png" onclick="imageChangerDarkBlue('code')">
+      <img class="color_icon_code" src="ColorIcons/purple_circle.png" onclick="imageChangerPurple('code')">
+      <img class="color_icon_code" src="ColorIcons/black_circle.png" onclick="imageChangerBlack('code')">
+      <img class="color_icon_code" src="ColorIcons/golden_circle.png" onclick="imageChangerGold('code')">
+      <img class="color_icon_code" src="ColorIcons/space_circle.png" onclick="imageChangerSpace('code')">
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><br><br>
+  <div id="code_more_colors" style="margin-left: 6cm">
+    <img class="more_colors" src="ClickHereForMoreColors.png" width=14% height=14% style="margin-left: 1cm">
+    <div id="coded_nail_color_change" style="margin-top: -2cm"></div>
+  </div>
+
+
+
+
+  <br><h1><center>Code It!</center></h1>
+  <h3><b> Sample: var nail_color = Snow White </b></h3>
+  <div id="nail_color_text">var nail_color = 'Snow White';</div>
+
+  <button id="hex_code_button" onclick="refreshIconsToHex()"> Try Using Hex Code! </button>
+
+
+
+</div>
+</div>
+
+<div id="nail_shape" class="tabcontent_code">
+ <h1 style="font-size: 28px"><center>Let’s get these nails in tip top shape! Choose one of the looks below!</center></h1>
+ <div id="shape_icons">
+  <img id="natural" src="Hands/Icons/natural_icon.png" onClick="imageChangeNatural('code')" width=25%>
+  <img id="edge" src="Hands/Icons/edge_icon.png" onClick="imageChangeEdge('code')" width=25%>
+  <img id="lipstick" src="Hands/Icons/lipstick_icon.png" onClick="imageChangeLipstick('code')" width=25%>
+  <img id="stiletto" src="Hands/Icons/stiletto_icon.png" onClick="imageChangeStiletto('code')" width=25%>
+  <img id="square" src="Hands/Icons/square_icon.png" onClick="imageChangeSquare('code')" width=25%>
+</div>
+</div>
+
+<div id="stickers" class="tabcontent_code">
+ <h1 style="font-size: 28px"><center>Don’t "stick" too the basics! Choose stickers to create your own awesome looks!</center></h1>
+
+ <center><button id="instructions_button_div" onclick="cuteAlert()"> Instructions </button></center>
+
+ <br>
+ <br>
+ <div class="code_sticker_tab">
+  <button id="emoji_button_code" class="codeable_tablinks" onclick="openCityCode(event, 'Emoji_code')">Emojis</button>
+  <button class="codeable_tablinks" onclick="openCityCode(event, 'Jewels_code')">Jewels</button>
+  <button class="codeable_tablinks" onclick="openCityCode(event, 'More_code')">More</button>
+</div>
+
+<div id="Emoji_code" class="codeable_sticker_tabcontent">
+  <h1><center>Food</center></h1>
+  <div class="Food">
+   <div class="changeable_code" id="code_movable1" tabindex="-1">
+    <img class="image" src="emojis/food/acorn.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable2" tabindex="-1">
+    <img class="image" src="emojis/food/apple_green.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable3" tabindex="-1">
+    <img class="image" src="emojis/food/apple_red.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable4" tabindex="-1">
+    <img src="emojis/food/avocado.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable5" tabindex="-1">
+    <img src="emojis/food/bacon.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable6" tabindex="-1">
+    <img src="emojis/food/baguette.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable7" tabindex="-1">
+    <img src="emojis/food/banana.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable8" tabindex="-1">
+    <img src="emojis/food/bread.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable9" tabindex="-1">
+    <img src="emojis/food/burger.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable10" tabindex="-1">
+    <img src="emojis/food/cannoli.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable11" tabindex="-1">
+    <img src="emojis/food/carrot.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable12" tabindex="-1">
+    <img src="emojis/food/cheese.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable13" tabindex="-1">
+    <img src="emojis/food/cherries.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable14" tabindex="-1">
+    <img src="emojis/food/chicken_wing_2.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable15" tabindex="-1">
+    <img src="emojis/food/chicken_wing.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable16" tabindex="-1">
+    <img src="emojis/food/chilli.png">
+  </div>
+
+
+  <div class="changeable_code" id="code_movable17" tabindex="-1">
+    <img src="emojis/food/corn.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable18" tabindex="-1">
+    <img src="emojis/food/cucumber.png">
+  </div>
+
+
+  <div class="changeable_code" id="code_movable19" tabindex="-1">
+    <img src="emojis/food/egg_pan.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable20" tabindex="-1">
+    <img class="image" src="emojis/food/egg.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable21" tabindex="-1">
+    <img class="image" src="emojis/food/eggplant.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable22" tabindex="-1">
+    <img class="image" src="emojis/food/enchilada.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable23" tabindex="-1">
+    <img src="emojis/food/french_fries.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable24" tabindex="-1">
+    <img src="emojis/food/grape.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable25" tabindex="-1">
+    <img src="emojis/food/grapefruit.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable26" tabindex="-1">
+    <img src="emojis/food/honey.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable29" tabindex="-1">
+    <img src="emojis/food/hotdog.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable30" tabindex="-1">
+    <img src="emojis/food/kiwi.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable31" tabindex="-1">
+    <img src="emojis/food/lemon.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable32" tabindex="-1">
+    <img src="emojis/food/orange.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable33" tabindex="-1">
+    <img src="emojis/food/pancake.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable34" tabindex="-1">
+    <img src="emojis/food/pasta.png">
+  </div>
+
+  <div class="changeable_code" id="code_movable35" tabindex="-1">
+    <img src="emojis/food/peach.png">
+  </div>
+
+
+</div>
+
+<br><br><br><br><br><br>
+
+<h1><center>Emotions</center></h1>
+<div class="Emotions">
+ <div class="changeable_code" id="code_movable41" tabindex="-1">
+  <img class="image" src="emojis/emoji_faces/blush.png">
+</div>
+
+<div class="changeable_code" id="code_movable42" tabindex="-1">
+  <img class="image" src="emojis/emoji_faces/closed_eyes_happy.png">
+</div>
+
+<div class="changeable_code" id="code_movable43" tabindex="-1">
+  <img class="image" src="emojis/emoji_faces/closed_eyes_smile.png">
+</div>
+
+<div class="changeable_code" id="code_movable44" tabindex="-1">
+  <img src="emojis/emoji_faces/disappointed.png">
+</div>
+
+<div class="changeable_code" id="code_movable45" tabindex="-1">
+  <img src="emojis/emoji_faces/heart_eyes.png">
+</div>
+
+<div class="changeable_code" id="code_movable46" tabindex="-1">
+  <img src="emojis/emoji_faces/kissy_face_eyes_closed.png">
+</div>
+
+<div class="changeable_code" id="code_movable47" tabindex="-1">
+  <img src="emojis/emoji_faces/kissy_face_eyes_opened.png">
+</div>
+
+<div class="changeable_code" id="code_movable48" tabindex="-1">
+  <img src="emojis/emoji_faces/kissy_face_with_eyes.png">
+</div>
+
+<div class="changeable_code" id="code_movable49" tabindex="-1">
+  <img src="emojis/emoji_faces/laughing_tears.png">
+</div>
+
+<div class="changeable_code" id="code_movable50" tabindex="-1">
+  <img src="emojis/emoji_faces/no_mouth.png">
+</div>
+
+<div class="changeable_code" id="code_movable51" tabindex="-1">
+  <img src="emojis/emoji_faces/open_mouth_happy.png">
+</div>
+
+<div class="changeable_code" id="code_movable52" tabindex="-1">
+  <img src="emojis/emoji_faces/persevering.png">
+</div>
+
+<div class="changeable_code" id="code_movable53" tabindex="-1">
+  <img src="emojis/emoji_faces/raised_eyebrow.png">
+</div>
+
+<div class="changeable_code" id="code_movable54" tabindex="-1">
+  <img src="emojis/emoji_faces/rolling_eyes.png">
+</div>
+
+<div class="changeable_code" id="code_movable55" tabindex="-1">
+  <img src="emojis/emoji_faces/sad_but_relieved.png">
+</div>
+
+<div class="changeable_code" id="code_movable56" tabindex="-1">
+  <img src="emojis/emoji_faces/smiley_face.png">
+</div>
+
+
+<div class="changeable_code" id="code_movable57" tabindex="-1">
+  <img src="emojis/emoji_faces/smirking_1.png">
+</div>
+
+<div class="changeable_code" id="code_movable58" tabindex="-1">
+  <img src="emojis/emoji_faces/smirking_2.png">
+</div>
+
+
+<div class="changeable_code" id="code_movable59" tabindex="-1">
+  <img src="emojis/emoji_faces/smirking_with_tears.png">
+</div>
+
+<div class="changeable_code" id="code_movable60" tabindex="-1">
+  <img class="image" src="emojis/emoji_faces/star_eyes.png">
+</div>
+
+<div class="changeable_code" id="code_movable61" tabindex="-1">
+  <img class="image" src="emojis/emoji_faces/straight_face.png">
+</div>
+
+<div class="changeable_code" id="code_movable62" tabindex="-1">
+  <img class="image" src="emojis/emoji_faces/sunglasses.png">
+</div>
+</div>
+</div>
+
+<div id="Jewels_code" class="codeable_sticker_tabcontent">
+  <h1><center>Jewels</center></h1>
+  <p><center>Coming soon!</center></p>
+</div>
+
+<div id="More_code" class="codeable_sticker_tabcontent">
+  <h1><center>More</center></h1>
+  <p><center>Coming soon!</center></p>
+</div>
+</div>
+
+<div id="save_art" class="tabcontent_code">
+ <h1 style="font-size: 30px"><center>You NAILED those looks! Now it’s time to save them!</center></h1>
+ <h2><center> Coming soon... </center></h2>
+</div>
+
+</div>
+
+
+<div id="coded_nail_hand">
+
+  <div id="wrapper_code"><img class="nail" id="coded_nail" src="Hands/Hands/hand1.png" draggable="false" style=""></div>
+  <div class="nail_background" id="code_nail_background"></div>
+</div>
+
+
+</div>
+
+</div>
+
+<!-- Forms Box -->
+<div id="sandbox" class="sbox">
+     <h1>Sandbox</h1>
+
+
+  <!-- SANDBOX NAIL BLOCK -->
+  <img id="sbox_nails" class="sbox_content" >
+    <img class="natural">
+
+      <div class="changeable" id="natural1" tabindex="-1" >
+        <img class="image" src="Natural nails/Round Thumb.png" alt="Thumb" hspace="20">
+      </div>
+
+      <div class="changeable" id="natural2" tabindex="-1">
+        <img class="image" src="Natural nails/Round Pointer.png" alt="Pointer" hspace="20">
+      </div>
+
+      <div class="changeable" id="natural3" tabindex="-1">
+        <img class="image" src="Natural nails/Round Middle.png" alt="Middle" hspace="20">
+      </div>
+
+      <div class="changeable" id="natural4" tabindex="-1">
+        <img class="image" src="Natural nails/Round Ring.png" alt="Ring" hspace="20">
+      </div>
+
+      <div class="changeable" id="natural5" tabindex="-1">
+        <img class="image" src="Natural nails/Round Pinky.png" alt="Pinky" hspace="20">
+      </div>
+
+      <!--<div id="nail-label"></div>-->
+
+    </div> <!--end for natural nails-->
+
+    <!--<div class="edge">
+
+      <div class="changeable" id="natural1" tabindex="-1" >
+          <img class="image" src="Natural nails/Edge Thumb.png" alt="Thumb" hspace="20">
+        </div>
+
+        <div class="changeable" id="natural2" tabindex="-1">
+          <img class="image" src="Natural nails/Edge Pointer.png" alt="Pointer" hspace="20">
+        </div>
+
+        <div class="changeable" id="natural3" tabindex="-1">
+          <img class="image" src="Natural nails/Edge Middle.png" alt="Middle" hspace="20">
+        </div>
+
+        <div class="changeable" id="natural3" tabindex="-1">
+          <img class="image" src="Natural nails/Edge Ring.png" alt="Ring" hspace="20">
+        </div>
+
+        <div class="changeable" id="natural3" tabindex="-1">
+          <img class="image" src="Natural nails/Edge Pinky.png" alt="Pinky" hspace="20">
+        </div>
+
+      </div> <!--end for edge nails--> -->
+
+
+
+
+  </div> <!--end of sandbox -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--SERVICE END-->
+
+<!--PORTFOLIO START-->
+<div id="portfolio" class="section-padding">
+ <div class="container">
+  <div class="row">
+   <div class="page-title text-center">
+    <h1>Examples</h1>
+    <p>Check out these other designs made by Preemadonnas. They've certainly nailed the code. </p>
+    <hr class="pg-titl-bdr-btm"></hr>
+  </div>
+  <div class="port-sec">
+    <div class="col-md-12 fil-btn text-center">
+     <div class="filter wrk-title active" data-filter="all">Show All</div>
+     <div class="filter wrk-title" data-filter=".category-1">See yours</div>
+
+
+   </div>
+   <div id="Container">
+     <div class="filimg mix category-1 category-3 col-md-4 col-sm-4 col-xs-12" data-myorder="2">
+      <img src="img/fea6.jpg" class="img-responsive">
+    </div>
+    <div class="filimg mix category-2 col-md-4 col-sm-4 col-xs-12" data-myorder="4">
+      <img src="img/fea2.png" class="img-responsive">
+    </div>
+    <div class="filimg mix category-1 col-md-4 col-sm-4 col-xs-12" data-myorder="1">
+      <img src="img/fea3.jpg" class="img-responsive"> </div>
+      <div class="filimg mix category-2 category-3 col-md-4 col-sm-4 col-xs-12" data-myorder="8">
+       <img src="img/fea4.jpg" class="img-responsive"> </div>
+       <div class="filimg mix category-2 col-md-4 col-sm-4 col-xs-12" data-myorder="8">
+        <img src="img/fea5.jpg" class="img-responsive">
+      </div>
+      <div class="filimg mix category-2 category-3 col-md-4 col-sm-4 col-xs-12" data-myorder="8">
+        <img src="img/fea6.jpg" class="img-responsive">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!--PORTFOLIO END-->
+
+
+<!--CTA2 START-->
+<div class="cta2">
+ <div class="container">
+  <div class="row white text-center">
+   <h3 class="wd75 fnt-24">“Every Thing is designed. Few Things are Designed well.” - Brian Reed</h3>
+   <p class="cta-sub-title"></p>
+   <a href="#" class="btn btn-default">Request A Quote</a>
+ </div>
+</div>
+</div>
+<!--CTA2 END-->
+
+<!--CONTACT START-->
+<div id="contact" class="section-padding">
+ <div class="container">
+  <div class="row">
+   <div class="page-title text-center">
+    <h1>Quick Contact</h1>
+    <p>Let us know if you have any feedback/questions. You can submit your designs here too! </p>
+    <hr class="pg-titl-bdr-btm"></hr>
+  </div>
+  <div id="sendmessage">Your message has been sent. Thank you!</div>
+  <div id="errormessage"></div>
+
+  <div class="form-sec">
+    <form action="" method="post" role="form" class="contactForm">
+     <div class="col-md-4 form-group">
+      <input type="text" name="name" class="form-control text-field-box" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+      <div class="validation"></div>
+    </div>
+    <div class="col-md-4 form-group">
+      <input type="email" class="form-control text-field-box" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+      <div class="validation"></div>
+    </div>
+    <div class="col-md-4 form-group">
+      <input type="text" class="form-control text-field-box" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+      <div class="validation"></div>
+    </div>
+    <div class="col-md-12 form-group">
+      <textarea class="form-control text-field-box" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+      <div class="validation"></div>
+
+      <button class="button-medium" id="contact-submit" type="submit" name="contact">Submit Now</button>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+</div>
+<!--CONTACT END-->
+
+<!--FOOTER START-->
+<footer class="footer section-padding">
+ <div class="container">
+  <div class="row">
+   <div style="visibility: visible; animation-name: zoomIn;" class="col-sm-12 text-center wow zoomIn">
+    <h3>Follow us on</h3>
+    <div class="footer_social">
+     <ul>
+      <li><a class="f_facebook" href="#"><i class="fa fa-facebook"></i></a>
+      </li>
+      <li><a class="f_twitter" href="#"><i class="fa fa-twitter"></i></a>
+      </li>
+      <li><a class="f_google" href="#"><i class="fa fa-google-plus"></i></a>
+      </li>
+      <li><a class="f_linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--- END COL -->
+</div>
+<!--- END ROW -->
+</div>
+<!--- END CONTAINER -->
+</footer>
+<!--FOOTER END-->
+<div class="footer-bottom">
+ <div class="container">
+  <div style="visibility: visible; animation-name: zoomIn;" class="col-md-12 text-center wow zoomIn">
+   <div class="footer_copyright">
+    <p> © Copyright, All Rights Reserved.</p>
+    <div class="credits">
+                                <!-- 
+                            All the links in the footer should remain intact. 
+                            You can delete the links only if you purchased the pro version.
+                            Licensing information: https://bootstrapmade.com/license/
+                            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Tempo
+                          -->
+                          Designed by <a href="https://bootstrapmade.com/">Bootstrap Themes</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+                <script src="jquery-ui.css"></script>
+                <script src="jquery.ui.rotatable.min.js"></script>
+                <script type="text/javascript" src="slick/slick.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.js"></script>
+                <script src="dist/js/bootstrap-colorpicker.js"></script>
+                <script src="ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+                <script>
+                 function openCity_code(evt, cityName) {
+                  var i, tabcontent_interactive, tablinks_interactive;
+                  tabcontent_interactive = document.getElementsByClassName("tabcontent_code");
+                  for (i = 0; i < tabcontent_interactive.length; i++) {
+                   tabcontent_interactive[i].style.display = "none";
+                 }
+                 tablinks_interactive = document.getElementsByClassName("tablinks_code");
+                 for (i = 0; i < tablinks_interactive.length; i++) {
+                   tablinks_interactive[i].className = tablinks_interactive[i].className.replace(" active", "");
+                 }
+                 document.getElementById(cityName).style.display = "block";
+                 evt.currentTarget.className += " active";
+               }
+             </script>
+
+
+             <script>
+               function openCityVersion(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("versiontabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                 tabcontent[i].style.display = "none";
+               }
+               tablinks = document.getElementsByClassName("version_tablinks");
+               for (i = 0; i < tablinks.length; i++) {
+                 tablinks[i].className = tablinks[i].className.replace(" active", "");
+               }
+               document.getElementById(cityName).style.display = "block";
+               evt.currentTarget.className += " active";
+             }
+
+             function openCity_interactive(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent_interactive");
+              for (i = 0; i < tabcontent.length; i++) {
+               tabcontent[i].style.display = "none";
+             }
+             tablinks = document.getElementsByClassName("tablinks_interactive");
+             for (i = 0; i < tablinks.length; i++) {
+               tablinks[i].className = tablinks[i].className.replace(" active", "");
+             }
+             document.getElementById(cityName).style.display = "block";
+             evt.currentTarget.className += " active";
+           }
+         </script>
+
+         <script>
+           function cuteAlert() {
+            document.getElementById("emoji_button").click();
+            document.getElementById("emoji_button_code").click();
+            console.log("here");
+            swal({
+             title: "Watch GIFs for instructions",
+             width: 1500,
+             padding: 10,
+             html: '<div id="gifs"> <div id="gif1" class="gif_class"><h2 style="color:#ca4d9c;">Step 1</h2><iframe src="https://giphy.com/embed/13qSm3cGHw6BXO" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div> <div id="gif2" class="gif_class"><h2 style="color:#ca4d9c;">Step 2</h2><iframe src="https://giphy.com/embed/AZWLIHEik2CoE" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><div id="gif3" class="gif_class"><h2 style="color:#ca4d9c;">Step 3</h2><iframe src="https://giphy.com/embed/Zblt5RbU2PMLm" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div></div>',
+             confirmButtonColor: '#ca4d9c',
+             background: 'white'
+           })
+
+          }
+
+
+
+          $(function() {
+            $('#interactive_nail_color_change').colorpicker({
+              color: '#ffaa00',
+              container: true,
+              inline: true
+            });
+
+            $('#interactive_nail_color_change').colorpicker().on('changeColor', function(e) {
+              $(selected_color_interactive_background).css("background", e.color.toString('rgba'));
+              setSelectedColor(e.color.toString('rgba'));
+            });
+
+            $('#coded_nail_color_change').colorpicker({
+              color: '#ffaa00',
+              container: true,
+              inline: true
+            });
+
+            $('#coded_nail_color_change').colorpicker().on('changeColor', function(e) {
+              $(code_nail_background).css("background", e.color.toString('rgba'));
+              nail_color_text.setValue("var nail_color = " + e.color.toString('rgba'));
+            });
+          });
+
+
+
+          $(document).ready(function() {
+            $('.your-class').slick({
+             prevArrow: "<img class='a-left control-c prev slick-prev' src='left.jpg'>",
+             nextArrow: "<img class='a-right control-c next slick-next' src='right.jpg'>",
+             dots: true,
+             infinite: false,
+             fade: true
+           });
+          });
+        </script>
+
+        <script>
+         function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+           tabcontent[i].style.display = "none";
+         }
+         tablinks = document.getElementsByClassName("tablinks");
+         for (i = 0; i < tablinks.length; i++) {
+           tablinks[i].className = tablinks[i].className.replace(" active", "");
+         }
+         document.getElementById(cityName).style.display = "block";
+         evt.currentTarget.className += " active";
+       }
+
+       function openCityCode(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("codeable_sticker_tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+         tabcontent[i].style.display = "none";
+       }
+       tablinks = document.getElementsByClassName("codeable_tablinks");
+       for (i = 0; i < tablinks.length; i++) {
+         tablinks[i].className = tablinks[i].className.replace(" active", "");
+       }
+       document.getElementById(cityName).style.display = "block";
+       evt.currentTarget.className += " active";
+     }
+   </script>
+
+
+
+
+   <script type="text/javascript">
+
+    var selectedColor = "";
+
+    function setSelectedColor(color){
+      selectedColor = color;
+    }
+
+    function changeNailColor(finger){
+      if(finger=="index"){
+        console.log("selected color is " + selectedColor);
+        $(index).css("background", selectedColor);
+      }
+      else if(finger=="middle"){
+        console.log("selected color is " + selectedColor);
+        $(middle).css("background", selectedColor);
+      }
+      else if(finger=="ring"){
+        console.log("selected color is " + selectedColor);
+        $(ring).css("background", selectedColor);
+      }
+      else if(finger=="pinky"){
+        console.log("selected color is " + selectedColor);
+        $(pinky).css("background", selectedColor);
+      }
+    }
+
+    function imageChangerGreen(type) {
+      if(type=="interactive"){
+       $(selected_color_interactive_background).css("background", "#40BF46");
+       selectedColor = "#40BF46";
+       console.log("here");
+     }
+     else{ 
+      $(code_nail_background).css("background", "#40BF46");
+      nail_color_text.setValue("var nail_color = 'Emerald Green';");
+    }
+  }
+
+  function imageChangerPink(type) {
+    if(type=='interactive'){
+     $(selected_color_interactive_background).css("background", "#ca4d9c");
+     selectedColor = "#ca4d9c";
+   }
+   else{
+     $(code_nail_background).css("background", "#ca4d9c");
+     nail_color_text.setValue("var nail_color = 'Preemadonna Pink';");
+   }
+ }
+
+ function imageChangerWhite(type) {
+  if(type=='interactive'){
+   $(selected_color_interactive_background).css("background", "white");
+   selectedColor = "white";
+ }
+ else{
+   $(code_nail_background).css("background", "white");
+   nail_color_text.setValue("var nail_color = 'Snow White';");
+ }
+}
+
+function imageChangerPurple(type) {
+  if(type=='interactive'){
+   $(selected_color_interactive_background).css("background", "#A73FC0");
+   selectedColor = "#A73FC0";
+ }
+ else{
+   $(code_nail_background).css("background", "#A73FC0");
+   nail_color_text.setValue("var nail_color = 'Royal Purple';");
+ }
+}
+
+function imageChangerYellow(type) {
+  if(type=='interactive'){
+   $(selected_color_interactive_background).css("background", "#F8EB26");
+   selectedColor = "#F8EB26";
+ }
+ else{
+   $(code_nail_background).css("background", "#F8EB26");
+   nail_color_text.setValue("var nail_color = 'Snapchat Yellow';");
+ }
+}
+
+function imageChangerRed(type) {
+  if(type=='interactive'){
+   $(selected_color_interactive_background).css("background", "#CB1F24");
+   selectedColor = "#CB1F24";
+ }
+ else{
+   $(code_nail_background).css("background", "#CB1F24");
+   nail_color_text.setValue("var nail_color = 'Rose Red';");
+ }
+}
+
+function imageChangerOrange(type) {
+  if(type=='interactive'){
+   $(selected_color_interactive_background).css("background", "#F89B2A");
+   selectedColor = "#F89B2A";
+ }
+ else{
+   $(code_nail_background).css("background", "#F89B2A");
+   nail_color_text.setValue("var nail_color = 'Fresh Mango';");
+ }
+}
+
+function imageChangerBlack(type) {
+  if(type=='interactive'){
+   $(selected_color_interactive_background).css("background", "black");
+   selectedColor = "black";
+ }
+ else{
+   $(code_nail_background).css("background", "black");
+   nail_color_text.setValue("var nail_color = 'Raven Black';");
+ }
+}
+
+function imageChangerLightBlue(type) {
+  if(type=='interactive'){
+   $(selected_color_interactive_background).css("background", "#478CE1");
+   selectedColor = "#478CE1";
+ }
+ else{
+   $(code_nail_background).css("background", "#478CE1");
+   nail_color_text.setValue("var nail_color = 'Baby Blue';");
+ }
+}
+
+function imageChangerDarkBlue(type) {
+  if(type=='interactive'){
+   $(selected_color_interactive_background).css("background", "#3F36D9");
+   selectedColor = "#3F36D9";
+ }
+ else{
+   $(code_nail_background).css("background", "#3F36D9");
+   nail_color_text.setValue("var nail_color = 'Midnight Blue';");
+ }
+}
+
+function imageChangerGold(type) {
+  if(type=='interactive'){
+   $(selected_color_interactive_background).css("background-image", "url('golden.jpg')");
+   selectedColor = "url('golden.jpg')";
+ }
+ else{
+   $(code_nail_background).css("background-image", "url('golden.jpg')");
+   nail_color_text.setValue("var nail_color = 'Goddess Golden';");
+ }
+}
+
+function imageChangerSpace(type) {
+  if(type=='interactive'){
+   $(selected_color_interactive_background).css("background-image", "url('space.png')");
+   selectedColor = "url('space.png')";
+ }
+ else{
+   $(code_nail_background).css("background-image", "url('space.png')");
+   nail_color_text.setValue("var nail_color = 'Spectacular Space';");
+ }
+}
+
+
+var oldVal = "";
+$("#nail_color_textarea").on("change keyup paste", function() {
+  var currentVal = $(this).val();
+
+
+  oldVal = currentVal;
+    //action to be performed on textarea changed
+    if(currentVal == "var nail_color = 'Snow White';"){
+      imageChangerWhite('code');
+    }
+
+    if(currentVal == "var nail_color = 'Preemadonna Pink';"){
+      imageChangerPink('code');
+    }
+    if(currentVal == "var nail_color = 'Rose Red';"){
+      imageChangerRed('code');
+    }
+
+    if(currentVal == "var nail_color = 'Fresh Mango';"){
+      imageChangerOrange('code');
+    }
+    if(currentVal == "var nail_color = 'Snapchat Yellow';"){
+      imageChangerYellow('code');
+    }
+
+    if(currentVal == "var nail_color = 'Emerald Green';"){
+      imageChangerGreen('code');
+    }
+    if(currentVal == "var nail_color = 'Baby Blue';"){
+      imageChangerLightBlue('code');
+    }
+
+    if(currentVal == "var nail_color = 'Midnight Blue';"){
+      imageChangerDarkBlue('code');
+    }
+    if(currentVal == "var nail_color = 'Royal Purple';"){
+      imageChangerPurple('code');
+    }
+
+    if(currentVal == "var nail_color = 'Raven Black';"){
+      imageChangerBlack('code');
+    }
+    if(currentVal == "var nail_color = 'Goddess Golden';"){
+      imageChangerGold('code');
+    }
+    if(currentVal == "var nail_color = 'Spectacular Space';"){
+      imageChangerSpace('code');
+    }
+
+  });
+</script>
+
+
+<script>
+                var imageBeingRotated = false; // The DOM image currently being rotated (if any)
+                var mouseStartAngle = false; // The angle of the mouse relative to the image centre at the start of the rotation
+                var imageStartAngle = false; // The rotation angle of the image at the start of the rotation
+                function bindElement(element) {
+                	$(element).bind("click", function() {
+                		console.log("delete")
+                		element.parent().remove();
+                	});
+                }
+
+                function dragStart(e, ui) {
+                	if (imageBeingRotated) return false;
+                }
+
+
+                function openLightbox(image) {
+
+                }
+
+                function startRotate(e) {
+
+                    // Exit if the shift key wasn't held down when the mouse button was pressed
+                    if (!e.shiftKey) return;
+
+                    // Track the image that we're going to rotate
+                    imageBeingRotated = this;
+
+                    // Store the angle of the mouse at the start of the rotation, relative to the image centre
+                    var imageCentre = getImageCentre(imageBeingRotated);
+                    var mouseStartXFromCentre = e.pageX - imageCentre[0];
+                    var mouseStartYFromCentre = e.pageY - imageCentre[1];
+                    mouseStartAngle = Math.atan2(mouseStartYFromCentre, mouseStartXFromCentre);
+
+                    // Store the current rotation angle of the image at the start of the rotation
+                    imageStartAngle = $(imageBeingRotated).data('currentRotation');
+
+                    // Set up an event handler to rotate the image as the mouse is moved
+                    $(document).mousemove(rotateImage);
+                    console.log("got here");
+                    return false;
+                  }
+
+                  function stopRotate(e) {
+
+                    // Exit if we're not rotating an image
+                    if (!imageBeingRotated) return;
+
+                    // Remove the event handler that tracked mouse movements during the rotation
+                    $(document).unbind('mousemove');
+
+                    // Cancel the image rotation by setting imageBeingRotated back to false.
+                    // Do this in a short while - after the click event has fired -
+                    // to prevent the lightbox appearing once the Shift key is released.
+                    setTimeout(function() {
+                    	imageBeingRotated = false;
+                    }, 10);
+                    return false;
+                  }
+
+                  function rotateImage(e) {
+
+                    // Exit if we're not rotating an image
+                    if (!e.shiftKey) return;
+                    if (!imageBeingRotated) return;
+
+                    // Calculate the new mouse angle relative to the image centre
+                    var imageCentre = getImageCentre(imageBeingRotated);
+                    var mouseXFromCentre = e.pageX - imageCentre[0];
+                    var mouseYFromCentre = e.pageY - imageCentre[1];
+                    var mouseAngle = Math.atan2(mouseYFromCentre, mouseXFromCentre);
+
+                    // Calculate the new rotation angle for the image
+                    var rotateAngle = mouseAngle - mouseStartAngle + imageStartAngle;
+
+                    // Rotate the image to the new angle, and store the new angle
+                    $(imageBeingRotated).css('transform', 'rotate(' + rotateAngle + 'rad)');
+                    $(imageBeingRotated).css('-moz-transform', 'rotate(' + rotateAngle + 'rad)');
+                    $(imageBeingRotated).css('-webkit-transform', 'rotate(' + rotateAngle + 'rad)');
+                    $(imageBeingRotated).css('-o-transform', 'rotate(' + rotateAngle + 'rad)');
+                    $(imageBeingRotated).data('currentRotation', rotateAngle);
+                    return false;
+                  }
+
+                  function getImageCentre(image) {
+
+                    // Rotate the image to 0 radians
+                    $(image).css('transform', 'rotate(0rad)');
+                    $(image).css('-moz-transform', 'rotate(0rad)');
+                    $(image).css('-webkit-transform', 'rotate(0rad)');
+                    $(image).css('-o-transform', 'rotate(0rad)');
+
+                    // Measure the image centre
+                    var imageOffset = $(image).offset();
+                    var imageCentreX = imageOffset.left + $(image).width() / 2;
+                    var imageCentreY = imageOffset.top + $(image).height() / 2;
+
+                    // Rotate the image back to its previous angle
+                    var currentRotation = $(image).data('currentRotation');
+                    $(imageBeingRotated).css('transform', 'rotate(' + currentRotation + 'rad)');
+                    $(imageBeingRotated).css('-moz-transform', 'rotate(' + currentRotation + 'rad)');
+                    $(imageBeingRotated).css('-webkit-transform', 'rotate(' + currentRotation + 'rad)');
+                    $(imageBeingRotated).css('-o-transform', 'rotate(' + currentRotation + 'rad)');
+
+                    // Return the calculated centre coordinates
+                    return Array(imageCentreX, imageCentreY);
+                  }
+
+
+
+                  $(document).ready(function() {
+
+
+
+                   document.getElementById("skin_tone_button").click();
+                   document.getElementById("skin_tone_button_1").click();
+                   document.getElementById("interactive_button").click();
+
+                   document.getElementById('skin_tone_text').style.fontSize='26px';
+                   document.getElementById('nail_color_text').style.fontSize='26px';
+                   var skin_tone_text = ace.edit("skin_tone_text");
+                   var nail_color_text = ace.edit("nail_color_text");
+
+                   skin_tone_text.setValue("var skin_tone = 'Emma Watson';");
+                   nail_color_text.setValue("var nail_color = 'Snow White';");
+
+                   var sticker_clone = $('div.changeable').clone();
+
+
+                   var count = 1;
+
+                   $('div.changeable').click(function(e) {
+
+                    document.getElementById("" + this.id).focus();
+
+                    count = count + 1;
+                    var div = document.createElement('div');
+                    div.style.position = "absolute";
+                    div.className = "isResizable";
+                    div.style.left = "420px";
+                    div.style.top = "300px";
+                    div.style.marginTop = "2cm";
+                    div.style.height = "50px";
+                    div.style.width = "50px";
+                    div.style.zIndex = "20";
+                    div.id = "original" + count;
+
+                    $(div).appendTo("#wrapper");
+
+
+
+                    $(div).draggable({
+                     containment: document.getElementById("interactive_nail_background"),
+                     start: dragStart
+                   });
+
+
+                    var clone = $("#" + this.id).clone();
+                    clone.attr("id", "clone" + count);
+
+                    console.log(clone);
+
+                    clone.appendTo(div);
+                    var red_x_div = null;
+                    var slider_div = null;
+                    var oddClick = true;
+                    var temp = null;
+                    var firstClick = true;
+                    var dragging = false;
+
+
+                    $(document).mouseup(stopRotate);
+
+                    var left = Math.floor(Math.random() * 450 + 100);
+                    var top = Math.floor(Math.random() * 100 + 100);
+                    var angle = Math.floor(Math.random() * 60 - 30);
+                    $(clone).css('left', left + 'px');
+                    $(clone).css('top', top + 'px');
+                    $(clone).css('transform', 'rotate(' + angle + 'deg)');
+                    $(clone).css('-moz-transform', 'rotate(' + angle + 'deg)');
+                    $(clone).css('-webkit-transform', 'rotate(' + angle + 'deg)');
+                    $(clone).css('-o-transform', 'rotate(' + angle + 'deg)');
+                    $(clone).data('currentRotation', angle * Math.PI / 180);
+
+
+                    clone.click(function() {
+
+                     if (oddClick) {
+
+                      openLightbox(this);
+                      oddClick = false;
+                      firstClick = false;
+                      console.log("odd");
+
+
+
+                      red_x_div = document.createElement('div');
+                      red_x_div.style.position = "absolute";
+                      red_x_div.style.top = "-0.6cm";
+                      red_x_div.style.left = "60px";
+                      red_x_div.style.height = "20px";
+                      red_x_div.style.width = "20px";
+                      red_x_div.id = "red" + count;
+
+
+
+
+                      $(red_x_div).appendTo(clone.parent());
+
+                      bindElement($("#red" + count));
+
+
+
+
+                      var x = document.createElement("IMG");
+                      x.setAttribute("src", "red_x.png");
+                      x.setAttribute("width", "20");
+                      x.setAttribute("height", "20");
+                      $(red_x_div).append(x);
+
+                      slider_div = document.createElement('div');
+                      slider_div.style.position = "absolute";
+                      slider_div.style.top = "-0.25cm";
+                      slider_div.style.left = "0px";
+                      slider_div.style.height = "3f0px";
+                      slider_div.style.width = "40px";
+                      slider_div.background = "black";
+                      slider_div.id = "slider" + count;
+
+
+
+                      var slider = document.createElement("input");
+                      slider.setAttribute("id", "slide" + count);
+                      slider.setAttribute("type", "range");
+                      slider.setAttribute("min", "35");
+                      slider.setAttribute("max", "100");
+                      slider.setAttribute("step", "0.25");
+                      slider.setAttribute("value", "50");
+
+                      $(slider_div).append(slider);
+                      $(clone.parent()).append(slider_div);
+
+
+                      $("#slide" + count).on('change', function() {
+                       var value = $(this).val();
+                       $(clone).width(value);
+                       $(clone).height(value);
+
+                     });
+
+
+                    } 
+
+                    else{
+
+                      oddClick = true;
+                      console.log("even");
+                      console.log($(red_x_div).parent().attr("id"));
+                      console.log($(clone.parent()).attr("id"));
+                      console.log($(red_x_div).parent().attr("id") == $(clone.parent()).attr("id"));
+                      if ($(red_x_div).parent().attr("id") == $(clone.parent()).attr("id")) {
+                       $(red_x_div).remove();
+
+                     }
+                     if ($(slider_div).parent().attr("id") == $(clone.parent()).attr("id")) {
+                       $(slider_div).remove();
+                     }
+
+                   }
+
+                 });
+
+                    $(clone).mousedown(startRotate);
+                  });
+
+
+$('div.changeable_code').click(function(e) {
+
+	document.getElementById("" + this.id).focus();
+
+	count = count + 1;
+	var div = document.createElement('div');
+	div.style.position = "absolute";
+	div.className = "isResizable";
+  div.style.left = "420px";
+  div.style.top = "300px";
+  div.style.marginTop = "2cm";
+  div.style.height = "50px";
+  div.style.width = "50px";
+  div.style.zIndex = "20";
+  div.id = "original" + count;
+
+  $(div).appendTo("#wrapper_code");
+
+
+
+  $(div).draggable({
+    containment: document.getElementById("code_nail_background"),
+    start: dragStart
+  });
+
+
+  var clone = $("#" + this.id).clone();
+  clone.attr("id", "clone" + count);
+
+  console.log(clone);
+
+  clone.appendTo(div);
+  var red_x_div = null;
+  var slider_div = null;
+  var oddClick = true;
+  var temp = null;
+  var firstClick = true;
+  var dragging = false;
+
+
+  $(document).mouseup(stopRotate);
+
+  var left = Math.floor(Math.random() * 450 + 100);
+  var top = Math.floor(Math.random() * 100 + 100);
+  var angle = Math.floor(Math.random() * 60 - 30);
+  $(clone).css('left', left + 'px');
+  $(clone).css('top', top + 'px');
+  $(clone).css('transform', 'rotate(' + angle + 'deg)');
+  $(clone).css('-moz-transform', 'rotate(' + angle + 'deg)');
+  $(clone).css('-webkit-transform', 'rotate(' + angle + 'deg)');
+  $(clone).css('-o-transform', 'rotate(' + angle + 'deg)');
+  $(clone).data('currentRotation', angle * Math.PI / 180);
+
+
+  clone.click(function() {
+
+    if (oddClick) {
+
+     openLightbox(this);
+     oddClick = false;
+     firstClick = false;
+     console.log("odd");
+
+
+
+     red_x_div = document.createElement('div');
+     red_x_div.style.position = "absolute";
+     red_x_div.style.top = "-0.6cm";
+     red_x_div.style.left = "60px";
+     red_x_div.style.height = "30px";
+     red_x_div.style.width = "30px";
+     red_x_div.id = "red" + count;
+
+
+
+
+     $(red_x_div).appendTo(clone.parent());
+
+     bindElement($("#red" + count));
+
+
+
+
+     var x = document.createElement("IMG");
+     x.setAttribute("src", "red_x.png");
+     x.setAttribute("width", "20");
+     x.setAttribute("height", "20");
+     $(red_x_div).append(x);
+
+     slider_div = document.createElement('div');
+     slider_div.style.position = "absolute";
+     slider_div.style.top = "-0.25cm";
+     slider_div.style.left = "0px";
+     slider_div.style.height = "30px";
+     slider_div.style.width = "40px";
+     slider_div.id = "slider" + count;
+
+
+
+     var slider = document.createElement("input");
+     slider.setAttribute("id", "slide" + count);
+     slider.setAttribute("type", "range");
+     slider.setAttribute("min", "35");
+     slider.setAttribute("max", "100");
+     slider.setAttribute("step", "0.25");
+     slider.setAttribute("value", "50");
+
+     $(slider_div).append(slider);
+     $(clone.parent()).append(slider_div);
+
+
+     $("#slide" + count).on('change', function() {
+      var value = $(this).val();
+      $(clone).width(value);
+      $(clone).height(value);
+
+    });
+
+
+   } 
+
+   else{
+
+     oddClick = true;
+     console.log("even");
+     console.log($(red_x_div).parent().attr("id"));
+     console.log($(clone.parent()).attr("id"));
+     console.log($(red_x_div).parent().attr("id") == $(clone.parent()).attr("id"));
+     if ($(red_x_div).parent().attr("id") == $(clone.parent()).attr("id")) {
+      $(red_x_div).remove();
+
+    }
+    if ($(slider_div).parent().attr("id") == $(clone.parent()).attr("id")) {
+      $(slider_div).remove();
+    }
+
+  }
+
+});
+
+  $(clone).mousedown(startRotate);
+});
+
+});
+
+</script>
+
+<script>
+
+  var skin_tone_text = ace.edit("skin_tone_text");
+  skin_tone_text.setTheme("ace/theme/monokai");
+  skin_tone_text.getSession().setMode("ace/mode/javascript");
+
+  var nail_color_text = ace.edit("nail_color_text");
+  nail_color_text.setTheme("ace/theme/monokai");
+  nail_color_text.getSession().setMode("ace/mode/javascript");
+
+
+  var color_inter = 1;
+  function setSkinToneInter(num){
+    color_inter = num;
+  }
+
+  function getSkinToneInter(){ 
+    return color_inter;
+  }
+
+
+  var color_code = 1;
+  function setSkinToneCode(num){
+    color_code = num;
+  }
+
+  function getSkinToneCode(){ 
+    return color_code;
+  }
+
+
+  var hand_type_inter = "Hands/hand";
+  function setHandTypeInter(type){
+    hand_type_inter = type;
+  }
+
+  function getHandTypeInter(){ 
+    return hand_type_inter;
+  }
+
+
+  var hand_type_code = "Hands/hand";
+  function setHandTypeCode(type){
+    hand_type_code = type;
+  }
+
+  function getHandTypeCode(){ 
+    return hand_type_code;
+  }
+
+
+
+
+  var code_text = "var skin_tone = ";
+
+  function imageChangeBrown1(type) {
+    var addCode = true;
+    if(getSkinToneCode() == 1){ addCode=false; }
+    if(type=="interactive"){
+     document.getElementById("interactive_nail").src = "Hands/" + getHandTypeInter() + "1.png";
+     setSkinToneInter(1);
+   } 
+   else{
+    document.getElementById("coded_nail").src = "Hands/" + getHandTypeCode() + "1.png"; setSkinToneCode(1);
+    if(addCode) skin_tone_text.setValue(code_text + "'Emma Watson';");
+  }
+
+}
+
+function imageChangeBrown2(type) {
+  var addCode = true;
+  if(getSkinToneCode() == 2){ addCode=false; }
+  if(type=="interactive"){ document.getElementById("interactive_nail").src = "Hands/" + getHandTypeInter() + "2.png"; setSkinToneInter(2); }
+  else{ document.getElementById("coded_nail").src = "Hands/" + getHandTypeCode() + "2.png"; setSkinToneCode(2);
+  if(addCode) skin_tone_text.setValue(code_text + "'Grace Hopper';");
+  console.log("text has been set");
+}
+}
+
+function imageChangeBrown3(type) {
+  var addCode = true;
+  if(getSkinToneCode() == 3){ addCode=false; }
+  if(type=="interactive"){ document.getElementById("interactive_nail").src = "Hands/" + getHandTypeInter() + "3.png"; setSkinToneInter(3); }
+  else{ document.getElementById("coded_nail").src = "Hands/" + getHandTypeCode() + "3.png"; setSkinToneCode(3);
+  if(addCode) skin_tone_text.setValue(code_text + "'Pree Walia';");
+}
+}
+
+function imageChangeBrown4(type) {
+  var addCode = true;
+  if(getSkinToneCode() == 4){ addCode=false; }
+  if(type=="interactive"){ document.getElementById("interactive_nail").src = "Hands/" + getHandTypeInter() + "4.png"; setSkinToneInter(4); }
+  else{ document.getElementById("coded_nail").src = "Hands/" + getHandTypeCode() + "4.png"; setSkinToneCode(4);
+  if(addCode) skin_tone_text.setValue(code_text + "'Priyanka Chopra';"); }
+}
+
+function imageChangeBrown5(type) {
+  var addCode = true;
+  if(getSkinToneCode() == 5){ addCode=false; }
+  if(type=="interactive"){ document.getElementById("interactive_nail").src = "Hands/" + getHandTypeInter() + "5.png"; setSkinToneInter(5); }
+  else{ document.getElementById("coded_nail").src = "Hands/" + getHandTypeCode() + "5.png"; setSkinToneCode(5);
+  if(addCode) skin_tone_text.setValue(code_text + "'Malala Yousafzai';"); }
+}
+
+function imageChangeBrown6(type) {
+  var addCode = true;
+  if(getSkinToneCode() == 6){ addCode=false; }
+  if(type=="interactive"){ document.getElementById("interactive_nail").src = "Hands/" + getHandTypeInter() + "6.png"; setSkinToneInter(6); }
+  else{ document.getElementById("coded_nail").src = "Hands/" + getHandTypeCode() + "6.png"; setSkinToneCode(6);
+  if(addCode) skin_tone_text.setValue(code_text + "'Tyra Banks';"); }
+}
+
+function imageChangeBrown7(type) {
+  var addCode = true;
+  if(getSkinToneCode() == 7){ addCode=false; }
+  if(type=="interactive"){ document.getElementById("interactive_nail").src = "Hands/" + getHandTypeInter() + "7.png"; setSkinToneInter(7); }
+  else{ document.getElementById("coded_nail").src = "Hands/" + getHandTypeCode() + "7.png"; setSkinToneCode(7);
+  if(addCode) skin_tone_text.setValue(code_text + "'Beyonce Knowles';"); }
+}
+
+function imageChangeBrown8(type) {
+  var addCode = true;
+  if(getSkinToneCode() == 8){ addCode=false; }
+  if(type=="interactive"){ document.getElementById("interactive_nail").src = "Hands/" + getHandTypeInter() + "8.png"; setSkinToneInter(8); }
+  else{ document.getElementById("coded_nail").src = "Hands/" + getHandTypeCode() + "8.png"; setSkinToneCode(8);
+  if(addCode) skin_tone_text.setValue(code_text + "'Michelle Obama';"); }
+}
+
+function imageChangeBrown9(type) {
+  var addCode = true;
+  if(getSkinToneCode() == 9){ addCode=false; }
+  if(type=="interactive"){ document.getElementById("interactive_nail").src = "Hands/" + getHandTypeInter() + "9.png"; setSkinToneInter(9); }
+  else{ document.getElementById("coded_nail").src = "Hands/" + getHandTypeCode() + "9.png"; setSkinToneCode(9);
+  if(addCode) skin_tone_text.setValue(code_text + "'Oprah Winfrey';"); }
+}
+
+function imageChangeBrown10(type) {
+  var addCode = true;
+  if(getSkinToneCode() == 10){ addCode=false; }
+  if(type=="interactive"){ document.getElementById("interactive_nail").src = "Hands/" + getHandTypeInter() + "10.png"; setSkinToneInter(10); }
+  else{ document.getElementById("coded_nail").src = "Hands/" + getHandTypeCode() + "10.png"; setSkinToneCode(10);
+  if(addCode) skin_tone_text.setValue(code_text + "'Lupita Nyongo';"); }
+}
+
+
+function setText(elemID, text)
+{
+  var elem = document.getElementById(elemID);
+  elem.value = text;
+}
+
+
+var oldVal = "";
+skin_tone_text.getSession().on('change', function(e) {
+  var currentVal = skin_tone_text.getValue();
+
+
+  oldVal = currentVal;
+    //action to be performed on textarea changed
+    if(currentVal == "var skin_tone = 'Emma Watson';"){
+      imageChangeBrown1('code');
+    }
+
+    if(currentVal == "var skin_tone = 'Grace Hopper';"){
+      imageChangeBrown2('code');
+    }
+    if(currentVal == "var skin_tone = 'Pree Walia';"){
+      imageChangeBrown3('code');
+    }
+
+    if(currentVal == "var skin_tone = 'Priyanka Chopra';"){
+      imageChangeBrown4('code');
+    }
+    if(currentVal == "var skin_tone = 'Malala Yousafzai';"){
+      imageChangeBrown5('code');
+    }
+
+    if(currentVal == "var skin_tone = 'Tyra Banks';"){
+      imageChangeBrown6('code');
+    }
+    if(currentVal == "var skin_tone = 'Beyonce Knowles';"){
+      imageChangeBrown7('code');
+    }
+
+    if(currentVal == "var skin_tone = 'Michelle Obama';"){
+      imageChangeBrown8('code');
+    }
+    if(currentVal == "var skin_tone = 'Oprah Winfrey';"){
+      imageChangeBrown9('code');
+    }
+
+    if(currentVal == "var skin_tone = 'Lupita Nyongo';"){
+      imageChangeBrown10('code');
+    }
+
+  });
+</script>
+
+<script>
+  function imageChangeNatural(type){
+    if(type=="interactive"){
+       // setHandTypeInter('Hand/hand');
+        //document.getElementById("interactive_nail").src = "Hands/Hands/hand" + getSkinToneInter() + ".png";
+        // **************** Get the SandBox to Pop up when nail shape is clicked ****************
+  // Get the sandbox
+     var modal = document.getElementById('sandbox');
+
+  // Get the image and insert it inside the sandbox
+  //var img = document.getElementById('natural');
+  //  var modalImg = document.getElementById("sbox_nails");
+    var img = document.getElementById('natural');
+    var modalImg = document.getElementById("natural1");
+    var modalImg2 = document.getElementById("natural2");
+    var modalImg3 = document.getElementById("natural3");
+    var modalImg4 = document.getElementById("natural4");
+    var modalImg5 = document.getElementById("natural5");
+   //var captionText = document.getElementById("nail-label");
+
+   modal.style.display = "block";
+   modalImg.src = this.src;
+   modalImg2.src = this.src;
+   modalImg3.src = this.src;
+   modalImg4.src = this.src;
+   modalImg5.src = this.src;
+
+   //captionText.innerHTML = this.alt;
+      }
+   else{
+  setHandTypeCode('Hand/hand');
+  document.getElementById("coded_nail").src = "Hands/Hands/hand" + getSkinToneCode() + ".png";
+    }
+}
+
+  function imageChangeSquare(type){
+    if(type=="interactive"){
+      setHandTypeInter('Square/DigitalHand_Square');
+      document.getElementById("interactive_nail").src = "Hands/Square/DigitalHand_Square" + getSkinToneInter() + ".png";
+    }
+    else{
+      setHandTypeCode('Square/DigitalHand_Square');
+      document.getElementById("coded_nail").src = "Hands/Square/DigitalHand_Square" + getSkinToneCode() + ".png";
+    }
+  }
+  function imageChangeLipstick(type){
+    if(type=="interactive"){
+      setHandTypeInter('Lipstick/DigitalHand_Lipstick');
+      document.getElementById("interactive_nail").src = "Hands/Lipstick/DigitalHand_Lipstick" + getSkinToneInter() + ".png";
+    }
+    else{
+      setHandTypeCode('Lipstick/DigitalHand_Lipstick');
+      document.getElementById("coded_nail").src = "Hands/Lipstick/DigitalHand_Lipstick" + getSkinToneCode() + ".png";
+    }
+  }
+  function imageChangeEdge(type){
+    if(type=="interactive"){
+      //setHandTypeInter('Edge/DigitalHand_Edge');
+      //document.getElementById("interactive_nail").src = "Hands/Edge/DigitalHand_Edge" + getSkinToneInter() + ".png";
+        // Get the sandbox
+     var modal = document.getElementById('sandbox');
+
+  // Get the image and insert it inside the sandbox
+  //var img = document.getElementById('natural');
+  //  var modalImg = document.getElementById("sbox_nails");
+    var img = document.getElementById('edge');
+    var modalImg = document.getElementById("edge1");
+    var modalImg2 = document.getElementById("edge2");
+    var modalImg3 = document.getElementById("edge3");
+    var modalImg4 = document.getElementById("edge4");
+    var modalImg5 = document.getElementById("natural5");
+   //var captionText = document.getElementById("nail-label");
+
+   modal.style.display = "block";
+   modalImg.src = this.src;
+   modalImg2.src = this.src;
+   modalImg3.src = this.src;
+   modalImg4.src = this.src;
+   modalImg5.src = this.src;
+    }
+    else{
+      setHandTypeCode('Edge/DigitalHand_Edge');
+      document.getElementById("coded_nail").src = "Hands/Edge/DigitalHand_Edge" + getSkinToneCode() + ".png";
+    }
+  }
+  function imageChangeStiletto(type){
+    if(type=="interactive"){
+      setHandTypeInter('Stiletto/DigitalHand_Stiletto');
+      document.getElementById("interactive_nail").src = "Hands/Stiletto/DigitalHand_Stiletto" + getSkinToneInter() + ".png";
+    }
+    else{
+      setHandTypeCode('Stiletto/DigitalHand_Stiletto');
+      document.getElementById("coded_nail").src = "Hands/Stiletto/DigitalHand_Stiletto" + getSkinToneCode() + ".png";
+    }
+  }
+
+</script>
+
+<script type="text/javascript">
+	$( init );
+
+	function init() {
+    // Create droppable
+    $('<div id="slot1"></div>').appendTo( '#imageSlot' ).droppable( {
+    	accept: '#savedImageHolder div',
+    	hoverClass: 'hovered',
+    	drop:function(event, ui){
+    		ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+    	}
+    } );
+    
+    $('#savedImageHolder').droppable( {
+			  //accept: '#slot1 div',
+			  hoverClass: 'ui-state-highlight',
+			  drop:function(event, ui){
+			  	ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+			  }            
+			} );
+    
+    // Make question draggable
+    $("#decorated_nails_div").draggable( {
+    	cursor: 'move',
+			//snap: '#content',
+			revert: 'invalid'
+		} );
+
+  }
+
+
+  function refreshIconsToHex(){
+    var colors = document.getElementById('coded_colors');
+    var colors_content = colors.innerHTML;
+    colors.innerHTML = "";
+
+    var container = document.getElementById("colors_coded_container");
+
+    var white = document.createElement("IMG");
+    white.setAttribute("src", "ColorIcons/white_hex.png");
+    white.setAttribute("width", "150");
+    white.setAttribute("height", "160");
+    white.setAttribute("onClick", "imageChangerWhite()");
+    $(container).append(white);
+
+    var pink = document.createElement("IMG");
+    pink.setAttribute("src", "ColorIcons/pink_hex.png");
+    pink.setAttribute("width", "150");
+    pink.setAttribute("height", "160");
+    pink.setAttribute("onClick", "imageChangerPink()");
+    $(container).append(pink);
+
+    var red = document.createElement("IMG");
+    red.setAttribute("src", "ColorIcons/red_hex.png");
+    red.setAttribute("width", "150");
+    red.setAttribute("height", "160");
+    red.setAttribute("onClick", "imageChangerRed()");
+    $(container).append(red);
+
+    var orange = document.createElement("IMG");
+    orange.setAttribute("src", "ColorIcons/orange_hex.png");
+    orange.setAttribute("width", "150");
+    orange.setAttribute("height", "160");
+    orange.setAttribute("onClick", "imageChangerOrange()");
+    $(container).append(orange);
+
+    var yellow = document.createElement("IMG");
+    yellow.setAttribute("src", "ColorIcons/yellow_hex.png");
+    yellow.setAttribute("width", "150");
+    yellow.setAttribute("height", "160");
+    yellow.setAttribute("onClick", "imageChangerYellow()");
+    $(container).append(yellow);
+
+    var green = document.createElement("IMG");
+    green.setAttribute("src", "ColorIcons/green_hex.png");
+    green.setAttribute("width", "150");
+    green.setAttribute("height", "160");
+    green.setAttribute("onClick", "imageChangerGreen()");
+    $(container).append(green);
+
+    var lightBlue = document.createElement("IMG");
+    lightBlue.setAttribute("src", "ColorIcons/light_blue_hex.png");
+    lightBlue.setAttribute("width", "150");
+    lightBlue.setAttribute("height", "160");
+    lightBlue.setAttribute("onClick", "imageChangerLightBlue()");
+    $(container).append(lightBlue);
+
+    var darkBlue = document.createElement("IMG");
+    darkBlue.setAttribute("src", "ColorIcons/dark_blue_hex.png");
+    darkBlue.setAttribute("width", "150");
+    darkBlue.setAttribute("height", "160");
+    darkBlue.setAttribute("onClick", "imageChangerDarkBlue()");
+    $(container).append(darkBlue);
+
+    var purple = document.createElement("IMG");
+    purple.setAttribute("src", "ColorIcons/purple_hex.png");
+    purple.setAttribute("width", "150");
+    purple.setAttribute("height", "160");
+    purple.setAttribute("onClick", "imageChangerPurple()");
+    $(container).append(purple);
+
+    var black = document.createElement("IMG");
+    black.setAttribute("src", "ColorIcons/black_hex.png");
+    black.setAttribute("width", "150");
+    black.setAttribute("height", "160");
+    black.setAttribute("onClick", "imageChangerBlack()");
+    $(container).append(black);
+
+    var golden = document.createElement("IMG");
+    golden.setAttribute("src", "ColorIcons/golden_circle.png");
+    golden.setAttribute("width", "150");
+    golden.setAttribute("height", "160");
+    golden.setAttribute("onClick", "imageChangerGold()");
+    $(container).append(golden);
+
+    var space = document.createElement("IMG");
+    space.setAttribute("src", "ColorIcons/space_circle.png");
+    space.setAttribute("width", "150");
+    space.setAttribute("height", "160");
+    space.setAttribute("onClick", "imageChangerSpace()");
+    $(container).append(space);
+
+    document.getElementById("hex_code_button").innerHTML = "Back to Names";
+    document.getElementById("hex_code_button").setAttribute("onClick", refreshIconsToNames(colors_content));
+  }
+
+  function refreshIconsToNames(content){
+
+    var container = document.getElementById("colors_coded_container");
+
+  }
+
+</script>
+
+
+
+
+</body>
+
+</html>

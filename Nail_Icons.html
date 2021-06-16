@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+
+<div style="padding: 6px;"></div>
+<img id="Nail_Icons" src="Nail Icons.png" 
+	usemap="#Nails_Map" style="width:600px;height:371px;">
+<map name="Nails_Map">
+    <area class="yellow" data-state="Nails" shape="rect" coords="30,30,200,300" href="" />
+    
+
+    </map>
+
+
+
+
+<!-- <div style= "padding: 6px;" ></div>
+	<img id="Nail_Map " src= "Nail Icons.png" align="center" 
+	usemap="#NailIcons">
+	<map name="NailIcons">
+		<area href="#" data-state="Nail" full="Regular" shape="rect" coords="0,0 200, 200"> 
+	</map>	
+
+ -->
+<script src="http://www.outsharked.com/scripts/jquery.imagemapster.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+var profiles = [
+    
+    {
+        areas: "Nails",
+        options: {
+            fillColor: 'f00000'   
+        }
+    }
+    ];
+
+ // map the profiles to a new object we can acccess by key name
+
+var optionsXref = {};
+
+$.each(profiles,function(i,e) {
+    var areas = e.areas.split(',');
+    
+    // this maps a property "xref.statecode" to the
+    // option data for that key
+    
+    $.each(areas,function(j,key) {
+        optionsXref[key]=e.options;
+    });        
+});
+
+
+var image = $('#Nail_Map');
+ -->
+image.mapster({
+    mapKey: 'data-state',
+    onClick: function(e) {
+        if (e.selected) {
+            image.mapster('set',true,e.key, optionsXref[e.key]);       
+            return false;
+        }            
+    }
+});
+
+$(".yellow").on("click", function(e){
+    e.preventDefault();
+	e.preventDefault();
+    alert('Regular');
+});
+
+</script>
+</body>
+</html>
+
+
+
